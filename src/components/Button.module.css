@@ -1,0 +1,28 @@
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.primary {
+  background-color: #d97706; /* Amber-600 from design */
+  color: white;
+  border: none;
+}
+
+.primary:hover {
+  background-color: #b45309; /* Darker amber */
+}
+
+.secondary {
+  background-color: #f472b6; /* Pink-400 from design */
+  color: white;
+  border: none;
+}
+
+.secondary:hover {
+  background-color: #db2777; /* Darker pink */
+}

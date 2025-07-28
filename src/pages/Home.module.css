@@ -1,0 +1,88 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fdf2f8; /* Light pink background */
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  background-image: url('/images/cake2.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem 1rem;
+  text-align: center;
+  position: relative;
+  color: #1f2937;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle span {
+  color: #831843; /* Dark pink */
+}
+
+.featured {
+  padding: 4rem 1rem;
+  background-color: white;
+}
+
+.cardGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.holiday {
+  padding: 4rem 1rem;
+  background-color: #fee2e2; /* Light pink */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.holidayItem {
+  text-align: center;
+  max-width: 300px;
+}
+
+.holidayTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.holidayTitle span {
+  color: #dc2626; /* Red for discount */
+}
+
+.holidayImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+  .holiday {
+    flex-direction: column;
+    align-items: center;
+  }
+}
