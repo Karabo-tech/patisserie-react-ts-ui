@@ -1,5 +1,6 @@
 {
   "name": "my-vue-app",
+  "homepage": "https://karabo-tech.github.io/patisserie-react-ts-ui",
   "private": true,
   "version": "0.0.0",
   "type": "module",
