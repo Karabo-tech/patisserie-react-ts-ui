@@ -1,69 +1,57 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Patisserie React TSPatisserie Preview
 
-Currently, two official plugins are available:
+# Overview
+Patisserie React TS is a modern, responsive front-end web application built with React and TypeScript. Inspired by an elegant patisserie UI design featuring cakes, macarons, and cupcakes, it offers a delightful bakery experience with interactive elements and a focus on seasonal collections.Description (20 Words)Patisserie React TS: Responsive bakery UI with reusable components, hover effects, and TypeScript, showcasing cakes, macarons, and holiday offers.FeaturesStunning Visual Design: Hero section with cake images, a three-card grid for product categories, and a holiday collection showcase.
+Interactive Elements: Hover effects on navigation links and buttons for enhanced user engagement.
+Responsive Layout: Optimized for desktop, tablet, and mobile devices with adaptive grids and media queries.
+Reusable Components: Built with TypeScript for maintainability (e.g., Header, Footer, Card, Button).
+Navigation: Sticky header with links to Home, Menu, Cakes, Pastries, and Contact pages using React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TechnologiesFramework: React
+Type System: TypeScript
+Styling: CSS Modules for scoped styling
+Dependencies:@heroicons/react for icons
+react-router-dom for routing
 
-## Expanding the ESLint configuration
+Build Tool: Vite for fast development and bundling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+InstallationClone the Repository:bash
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+git clone https://github.com/your-username/patisserie-react-ts.git
+cd patisserie-react-ts
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Install Dependencies:bash
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Run Locally:bash
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Open http://localhost:5173 in your browser to see the app.
+
+UsageExplore the home page to view featured products (Custom Cakes, Macarons, Cupcake Collections).
+Navigate using the header links to other pages (e.g., Menu, Contact).
+Hover over buttons and links to see interactive effects.
+The app is currently a front-end prototype; backend integration (e.g., ordering) is pending.
+
+Building for ProductionTo create a production build:bash
+
+npm run build
+
+This generates a build folder with static files. Serve it locally with:bash
+
+npx serve -s build
+
+DeploymentThe app is designed to deploy as a static site. Follow these steps based on your platform:Vercel:Push to GitHub and deploy via Vercel. Add vercel.json:json
+
+{
+  "builds": [{ "src": "build/index.html", "use": "@vercel/static" }],
+  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
+}
+
+Run vercel in the project directory
+
+https://patisserie-react-ts-ui-avdh.vercel.app/
