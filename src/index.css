@@ -1,7 +1,16 @@
+:root {
+  --primary-color: #d97706;
+  --secondary-color: #f472b6;
+  --text-color: #1f2937;
+  --spacing-unit: clamp(0.5rem, 1vw, 1.5rem); /* Fluid spacing */
+  --max-width: 1200px;
+}
+
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif; /* Matches design typography */
+  font-family: 'Playfair Display', serif;
   line-height: 1.5;
+  background-color: #fdf2f8;
 }
 
 * {
