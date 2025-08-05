@@ -74,15 +74,21 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2rem;
+/* QHD and Larger (1440px to 2560px+) */
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1500px; /* Allow wider content */
   }
   .cardGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 22vw, 400px), 1fr));
   }
   .holiday {
-    flex-direction: column;
-    align-items: center;
+    gap: calc(var(--spacing-unit) * 3);
+  }
+  .hero {
+    padding: calc(var(--spacing-unit) * 8) calc(var(--spacing-unit) * 3);
+  }
+  .heroTitle {
+    font-size: clamp(2.5rem, 6vw, 4rem);
   }
 }
