@@ -1,20 +1,108 @@
 .footer {
-  background-color: #fee2e2; /* Light pink */
-  padding: 1.5rem;
+  background-color: #fee2e2;
+  padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
-  color: #831843; /* Dark pink */
+  color: #831843;
+  margin-top: auto;
 }
 
 .content {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
+  font-size: var(--font-size-sm);
 }
 
 .socialIcons {
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
 }
 
 .icon {
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: var(--font-size-lg);
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #9f1239;
+}
+
+/* Tablet (640px - 1023px) */
+@media (min-width: 640px) {
+  .footer {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .content {
+    font-size: var(--font-size-base);
+  }
+
+  .icon {
+    font-size: var(--font-size-xl);
+  }
+
+  .socialIcons {
+    gap: var(--spacing-md);
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) {
+  .footer {
+    padding: var(--spacing-xl) var(--spacing-xl);
+  }
+
+  .content {
+    max-width: var(--container-lg);
+  }
+}
+
+/* Large Desktop (1440px - 1919px) */
+@media (min-width: 1440px) {
+  .footer {
+    padding: var(--spacing-2xl) clamp(2rem, 4vw, 4rem);
+  }
+
+  .content {
+    max-width: var(--container-xl);
+    font-size: var(--font-size-lg);
+  }
+
+  .socialIcons {
+    gap: var(--spacing-lg);
+  }
+
+  .icon {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* QHD (1920px - 2559px) */
+@media (min-width: 1920px) {
+  .content {
+    max-width: var(--container-2xl);
+  }
+
+  .footer {
+    padding: clamp(3rem, 5vw, 4rem) clamp(3rem, 5vw, 5rem);
+  }
+}
+
+/* Large QHD 27" (2560px+) */
+@media (min-width: 2560px) {
+  .content {
+    max-width: 2200px;
+  }
+
+  .footer {
+    padding: clamp(4rem, 6vw, 5rem) clamp(4rem, 6vw, 6rem);
+  }
+
+  .icon {
+    font-size: clamp(1.75rem, 2vw, 2rem);
+  }
 }
